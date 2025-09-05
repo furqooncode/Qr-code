@@ -21,6 +21,8 @@ body{
   height:70%;
   align-items: center;
   padding: 15px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);; 
+  border-radius: 10px;
 }
 .box h2{
   font-size: 22px;

@@ -1,16 +1,15 @@
 function submit() {
-  event.preventDefault()
-  const name = document.getElementById('name')
+  const name = document.getElementById('name');
   const message = document.getElementById('message')
   if(name.value === "" && message.value === ""){
     alert("🥵 cannot get QR code of null")
-  }else if(name.value === "" || message.value === ""){
+  }else if(name.value == "" || " " || message.value == "" || " "){
     alert("Please 🙏 enter a name or message")
   }else{
           let codes = JSON.parse(localStorage.getItem('codes')) || [];
   
  codes.push({
-   name: name.value,
+   name: name.value.trim().toUpperCase(),
    message :message.value,
  });
  
