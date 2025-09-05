@@ -9,13 +9,18 @@ gotten.forEach(item =>{
 
 
 function download() {
-  var node = document.getElementById('real');
-  domtoimage.toBlob(node)
-    .then(function(blob) {
-      window.saveAs(blob, 'my-node.png');
-    })
-    .catch(function(error) {
-      console.error('oops, something went wrong!', error);
-    });
-}
+  const node = document.getElementById('real');
+  node.style.display = 'block';
+  node.style.opacity = '1';
+  node.style.visibility = 'visible';
 
+  setTimeout(() => {
+    domtoimage.toBlob(node)
+      .then(function (blob) {
+        window.saveAs(blob, 'qr-code.png');
+      })
+      .catch(function (error) {
+        console.error('Oops, something went wrong!', error);
+      });
+  }, 100);
+}
