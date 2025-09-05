@@ -1,9 +1,10 @@
 function submit() {
+  event.preventDefault()
   const name = document.getElementById('name');
   const message = document.getElementById('message')
   if(name.value === "" && message.value === ""){
     alert("🥵 cannot get QR code of null")
-  }else if(name.value == "" || " " || message.value == "" || " "){
+  }else if(name.value == "" || message.value == ""){
     alert("Please 🙏 enter a name or message")
   }else{
           let codes = JSON.parse(localStorage.getItem('codes')) || [];
@@ -18,5 +19,7 @@ function submit() {
  window.location.href = 'qr.html';
   }
   name.value = "";
-  message.value = ""
+  message.value = "";
+  
+
 }
