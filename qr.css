@@ -4,21 +4,22 @@ body{
   margin: 0;
   padding: 0;
   background: linear-gradient(-135deg, #ff416c, #ff4b2b);
-  height: 100vh;
+  max-height: 100vh;
 }
 .container{
-  display: flex;
+  display: grid;
   align-items: center;
   place-content: center;
-  width: 100%;
-  height:80vh;
+  width: 90%;
+  height: 70;
   background: linear-gradient(135deg, #ff416c, #ff4b2b);; 
 }
 .box{
   text-align: center;
-  width: 85%;
-  background: re;
-  height:70%;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
   align-items: center;
   padding: 15px;
   background: linear-gradient(135deg, #ff416c, #ff4b2b);; 
@@ -29,21 +30,23 @@ body{
 }
 .imageplace{
   background: white;
-  height:70%;
-  width: 90%;
+  height: 80%;
+  width: 80%;
   padding:16px;
 }
 .imageplace img{
-  width:100%;
+  width: 100%;
   height: 100%;
-  
+  object-fit: center;
 }
+
 footer{
   bottom:0;
   left:0;
   text-align: center;
   padding: 10px;
 }
+
 footer button{
   width:100%;
   padding: 14px;
